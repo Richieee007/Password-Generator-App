@@ -4,6 +4,10 @@ import random
 import pyperclip
 
 def generator():
+
+    # Clear the current password field
+    passwordField.delete(0, END)
+
     small_alphabets = string.ascii_lowercase
     capital_alphabets = string.ascii_uppercase
     numbers = string.digits
@@ -21,8 +25,8 @@ def generator():
     if choice.get()==3:
         passwordField.insert(0,random.sample(all, password_length))
 
-   # password = random.sample(all, password_length)
-   # passwordField.insert(0,password)
+    # password = random.sample(all, password_length)
+    # passwordField.insert(0,password)
 
 def copy():
     random_password = passwordField.get()
